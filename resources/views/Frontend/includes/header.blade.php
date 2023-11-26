@@ -62,6 +62,9 @@
                            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                               <i class="fa fa-shopping-cart"></i>
                               <span>Your Cart</span>
+                              @php
+                                 $sum = 0;
+                              @endphp
                               <div class="qty">{{count($cartProduct)}}</div>
                            </a>
                            <div class="cart-dropdown">
@@ -73,15 +76,18 @@
                                     </div>
                                     <div class="product-body">
                                        <h3 class="product-name"><a href="#">{{$product->products[0]->name}}</a></h3>
-                                       <h4 class="product-price"><span class="qty">{{$product->qty}}x</span>${{$product->price}}</h4>
+                                       <h4 class="product-price"><span class="qty">{{$product->qty}}x</span>${{ $totalPrice = $product->qty * $product->price}}</h4>
                                     </div>
                                     <a href="{{url('/cart/product/remove/'.$product->id)}}"><button class="delete"><i class="fa fa-close"></i></button></a>
                                  </div>
                               </div>
+                              @php
+                                 $sum += $totalPrice
+                              @endphp
                            @endforeach
                               <div class="cart-summary">
                                  <small>{{$product->qty}} Item(s) Selected</small>
-                                 <h5>SUBTOTAL: $2940.00</h5>
+                                 <h5>SUBTOTAL: ${{$sum}}</h5>
                               </div>
                               <div class="cart-btns">
                                  <a href="#">View Cart</a>
