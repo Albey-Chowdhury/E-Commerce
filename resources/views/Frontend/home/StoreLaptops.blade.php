@@ -404,7 +404,9 @@
                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
                         </div>
                      </div>
-                     @include("Frontend.includes.addToCard")
+                     <div class="add-to-cart">
+                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                     </div>
                   </div>
                </div>
                <!-- /product -->

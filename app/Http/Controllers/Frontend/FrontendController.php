@@ -12,13 +12,14 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('Frontend.home.index');
+        $categories = Category::orderBy('id','desc')->get ();
+        $products = Product::orderBy('id','desc')->get();
+        return view('Frontend.home.index',compact('products','categories'));
     }
     public function Store()
     {
-        $categories = Category::orderBy('id','desc')->get();
         $products = Product::orderBy('id','desc')->get();
-        return view('Frontend.home.store',compact('products', 'categories'));
+        return view('Frontend.home.store',compact('products'));
     }
     public function Category()
     {

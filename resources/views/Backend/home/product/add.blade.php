@@ -80,6 +80,7 @@
                         <option selected disabled>Selected A Type</option>
                         <option value="Top">Top</option>
                         <option value="Hot">Hot</option>
+                        <option value="New">New</option>
                     </select>
                   </div>
                 </div>

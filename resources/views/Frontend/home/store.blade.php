@@ -196,9 +196,7 @@
                               </div>
                            </div>
                            <div class="product-body">
-                            @foreach ($categories as $category )
-                            {{-- <p class="product-category">{{$category->name}}</p> --}}
-                            @endforeach
+                            <p class="product-category">{{$product->category->name}}</p>
                               <h3 class="product-name"><a href="{{url('/Store/Laptops/'.$product->id)}}">{{ Str::ucfirst($product->name)}}</a></h3>
                               <h4 class="product-price">${{$product->Price}} <del class="product-old-price">$990.00</del></h4>
                               <div class="product-rating">

@@ -136,18 +136,20 @@
                         <div id="tab1" class="tab-pane active">
                            <div class="products-slick" data-nav="#slick-nav-1">
                               <!-- product -->
+                        @foreach ($products as $product )
+
                               <div class="product">
-                                 <div class="product-img">
-                                    <img src="Frontend/img/product01.png" alt="">
+                                  <div class="product-img">
+                                    <img src="{{asset('images/'.$product->image)}}" >
                                     <div class="product-label">
                                        <span class="sale">-30%</span>
                                        <span class="new">NEW</span>
                                     </div>
                                  </div>
                                  <div class="product-body">
-                                    <p class="product-category">Category</p>
-                                    <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                    <h4 class="product-price">$980.00 <del class="product-old-price">$990.00</del></h4>
+                                    <p class="product-category">{{$product->category->name}}</p>
+                                    <h3 class="product-name"><a href="#">{{$product->name}}</a></h3>
+                                    <h4 class="product-price">${{$product->Price}}<del class="product-old-price">$990.00</del></h4>
                                     <div class="product-rating">
                                        <i class="fa fa-star"></i>
                                        <i class="fa fa-star"></i>
@@ -161,12 +163,13 @@
                                        <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
                                     </div>
                                  </div>
-                                 <div class="add-to-cart">
-                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
-                                 </div>
-                              </div>
-                              <!-- /product -->
-                              <!-- product -->
+                                 @include('Frontend.includes.addToCard')
+                            </div>
+                            <!-- /product -->
+
+                        @endforeach
+
+                              {{-- <!-- product -->
                               <div class="product">
                                  <div class="product-img">
                                     <img src="Frontend/img/product02.png" alt="">
@@ -274,7 +277,7 @@
                                     <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
                                  </div>
                               </div>
-                              <!-- /product -->
+                              <!-- /product --> --}}
                            </div>
                            <div id="slick-nav-1" class="products-slick-nav"></div>
                         </div>

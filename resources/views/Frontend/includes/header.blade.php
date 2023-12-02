@@ -84,11 +84,11 @@
                               @php
                                  $sum += $totalPrice
                               @endphp
-                           @endforeach
                               <div class="cart-summary">
-                                 <small>{{$product->qty}} Item(s) Selected</small>
-                                 <h5>SUBTOTAL: ${{$sum}}</h5>
-                              </div>
+                                  <small>{{$product->qty}} Item(s) Selected</small>
+                                  <h5>SUBTOTAL: ${{$sum}}</h5>
+                                </div>
+                            @endforeach
                               <div class="cart-btns">
                                  <a href="#">View Cart</a>
                                  <a href="{{url('/cart/checkout')}}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
