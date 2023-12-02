@@ -21,5 +21,6 @@
       <!-- jQuery Plugins -->
       @include('Frontend.includes.script')
 
+       @stack('script')
    </body>
 </html>

@@ -726,12 +726,11 @@ textarea.input {
   left: 0px;
   width: 60%;
   background: #D10024;
-  opacity: 0.9;
+  opacity: 0.7;
   -webkit-transform: skewX(-45deg);
   -ms-transform: skewX(-45deg);
   transform: skewX(-45deg);
 }
-
 .shop:after {
   content: "";
   position: absolute;
@@ -740,7 +739,7 @@ textarea.input {
   left: 1px;
   width: 100%;
   background: #D10024;
-  opacity: 0.9;
+  opacity: 0.7;
   -webkit-transform: skewX(-45deg) translateX(-100%);
   -ms-transform: skewX(-45deg) translateX(-100%);
   transform: skewX(-45deg) translateX(-100%);
@@ -759,9 +758,10 @@ textarea.input {
 }
 
 .shop:hover .shop-img>img {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+
 }
 
 .shop .shop-body {
@@ -773,9 +773,9 @@ textarea.input {
 }
 
 .shop .shop-body h3 {
-  color: #FFF;
+  color: #fff;
+  font-weight: bolder;
 }
-
 .shop .shop-body .cta-btn {
   color: #FFF;
   text-transform: uppercase;
