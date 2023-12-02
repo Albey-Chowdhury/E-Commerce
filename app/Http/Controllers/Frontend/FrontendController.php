@@ -12,22 +12,22 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('Frontend.includes.home.index');
+        return view('Frontend.home.index');
     }
     public function Store()
     {
         $categories = Category::orderBy('id','desc')->get();
         $products = Product::orderBy('id','desc')->get();
-        return view('Frontend.includes.home.store',compact('products', 'categories'));
+        return view('Frontend.home.store',compact('products', 'categories'));
     }
     public function Category()
     {
-        return view('Frontend.includes.home.catagory');
+        return view('Frontend.home.catagory');
     }
     public function StoreLaptops($id)
     {
         $product = Product::find($id);
-        return view('Frontend.includes.home.StoreLaptops',compact( 'product'));
+        return view('Frontend.home.StoreLaptops',compact( 'product'));
     }
     public function productAddToCart(Request $request)
     {
@@ -50,6 +50,6 @@ class FrontendController extends Controller
     }
     public function cartCheckout()
     {
-        return view('Frontend.includes.home.checkout');
+        return view('Frontend.home.checkout');
     }
 }
