@@ -91,6 +91,12 @@
                   </div>
                 </div>
                 <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Discount</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" name="sale" type="text" placeholder="Enter You Discount">
+                  </div>
+                </div>
+                <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">File Upload</label>
                   <div class="col-sm-10">
                     <input class="form-control" name="image" type="file" id="formFile" accept="image/*">

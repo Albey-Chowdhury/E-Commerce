@@ -10,14 +10,6 @@ use App\Http\Controllers\Backend\ProductController;
 
 class ProductController extends Controller
 {
-    public function add_Product(){
-        $categories = Category::orderBy('id', 'desc')->get();
-        return view('Backend.home.product.add',compact('categories'));
-    }
-    public function manage_Product(){
-        $products = Product::with('Category')->orderBy('id', 'desc')->get();
-        return view('Backend.home.product.manage',compact('products'));
-    }
     public function store_Product(Request $request){
 
         $this->validate($request, [
@@ -42,6 +34,47 @@ class ProductController extends Controller
         $product->save();
 
         $this->setSuccessMessage('Success',' Product has been Created');
+        return redirect()->back();
+    }
+    public function add_Product(){
+        $categories = Category::orderBy('id', 'desc')->get();
+        return view('Backend.home.product.add',compact('categories'));
+    }
+    public function manage_Product(){
+        $products = Product::with('Category')->orderBy('id', 'desc')->get();
+        return view('Backend.home.product.manage',compact('products'));
+    }
+    public function edit_Product($id)
+    {
+        $product = Product::find($id);
+        return view("Backend.home.product.edit",compact('product'));
+    }
+    public function update_Product(Request $request , $id)
+    {
+        $product = Product::find($id);
+
+        if ($request->hasfile('image')){
+            if($request->image && file_exists(public_path('images/'.$product->image))){
+                unlink(public_path('images/'.$product->image));
+            }else{
+                $imageName = time(). '.' .$request->image->extension();
+                $request->image->move('images/', $imageName);
+            }
+
+            $product->image = $imageName;
+        }
+
+        $product->update([
+
+            'name'=>$request->name,
+            'Price'=>$request->Price,
+            'shot_description'=>$request->shot_description,
+            'long_description'=>$request->long_description,
+            'type'=>$request->type,
+            'qty'=>$request->qty,
+
+        ]);
+        $this->setSuccessMessage('Success',' Product has been Update');
         return redirect()->back();
     }
     public function delete_Product($id)

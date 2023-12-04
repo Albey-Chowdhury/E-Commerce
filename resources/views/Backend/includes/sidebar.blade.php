@@ -25,6 +25,25 @@
           </li>
         </ul>
       </li>
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#brand-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Brand</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="brand-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{{url('/brand/add')}}">
+              <i class="bi bi-circle"></i><span>Add Brand</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{url('/brand/manage')}}">
+              <i class="bi bi-circle"></i><span>Manage Brand</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#Product-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Product</span><i class="bi bi-chevron-down ms-auto"></i>

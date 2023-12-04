@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +46,11 @@ Route::post('/product/store',[ProductController::class,'store_Product']);
 Route::post('/product/update/{id}',[ProductController::class,'update_Product']);
 Route::get('/product/edit/{id}',[ProductController::class,'edit_Product']);
 Route::get('/product/delete/{id}',[ProductController::class,'delete_Product']);
+
+Route::get('/brand/add', [BrandController::class, 'add_brand']);
+Route::post('/brand/store',[BrandController::class,'store_brand']);
+Route::get('/brand/manage', [BrandController::class, 'manage_brand']);
+Route::post('/brand/update/{id}',[BrandController::class,'update_brand']);
+Route::get('/brand/edit/{id}',[BrandController::class,'edit_brand']);
+Route::get('/brand/delete/{id}',[BrandController::class,'delete_brand']);
 
