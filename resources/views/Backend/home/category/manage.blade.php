@@ -47,8 +47,8 @@
                         <img src="{{asset('images/'.$category->image)}}" height="150" width="200"/>
                     </td>
                     <td>
-                        <a href="{{url('/category/edit/'.$category->id)}}" class="btn btn-sm  btn-info " >Edit</a>
-                        <a href="{{url('/category/delete/'.$category->id)}}" onclick=" return confirm('Are you sure delete this category')" class="btn btn-sm  btn-danger " >Delete</a>
+                        <a href="{{url('/brand/edit/'.$category->id)}}" class="btn btn-sm  btn-info " >Edit</a>
+                        <a href="{{url('/brand/delete/'.$category->id)}}" onclick=" return confirm('Are you sure delete this category')" class="btn btn-sm  btn-danger " >Delete</a>
                     </td>
                 </tr>
                 @endforeach

@@ -35,17 +35,42 @@ class BrandController extends Controller
         $brands = Brand::select(['id','name','image'])->orderBy('id','desc')->get();
         return view("Backend.home.brand.manage",compact('brands'));
     }
-    public function edit_brand()
+    public function edit_brand($id)
     {
-
+        $brand = Brand::find($id);
+        return view("Backend.home.brand.edit",compact('brand'));
     }
-    public function update_brand()
+    public function update_brand(Request $request , $id)
     {
+       $brand = Brand::find($id);
 
+       $this->validate($request, [
+        'name' => 'required|string|max:255',
+        'image' => 'sometimes|image'
+       ]);
 
+       if($request->hasfile('image')){
+        if($request->image && file_exists(public_path('images/'.$category->image))){
+            unlink(public_path('images/'.$brand->image));
+        }else{
+
+            $imagName = time(). '.' .$request->image->extension();
+            $request->image->move('images/', $imagName);
+        }
+       }
+
+       $brand->update([
+            'name'=> $request->name,
+       ]);
+
+       $this->setSuccessMessage('Success',' Brand has been  Update');
+        return redirect()->back();
     }
     public function delete_brand()
     {
-
+        $brand = Brand::find($id);
+        $brand->delete();
+        $this->setSuccessMessage('Success',' Brand has been Delet');
+        return redirect()->back();
     }
 }

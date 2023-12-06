@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Brand;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
         view::composer('*', function($view) {
             $view->with('categories', Category::all());
             $view->with('products', Product::all());
+            $view->with('brand', Brand::all());
             $view->with('cartProduct',Cart::with('products')->where('ip_address',request()->ip())->get());
         });
 

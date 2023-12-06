@@ -6,11 +6,28 @@
          <div class="container">
             <!-- row -->
             <div class="row">
-                {{-- Slider --}}
-                <div class="slider">
-
+                {{--Catagory --}}
+                <div class="top-catagory">
+                    <div class="container">
+                        <div class="row">
+                            <div class="top-all-catagory">
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/smart-tv.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/gpu.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/smart-refrigerator.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/laptop.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/gpu.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/gpu.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/desktop.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {{--/ Slider --}}
+                {{--/ Catagory --}}
                <!-- shop -->
                <div class="col-md-4 col-xs-6">
                   <div class="shop">
@@ -598,7 +615,9 @@
          <!-- /container -->
       </div>
       <!-- /NEWSLETTER -->
-      @push('script')
+@endsection
+
+     @push('script')
        <script>
         //Time Calculator
 
@@ -646,6 +665,5 @@
             document.getElementById("misecs").innerHTML = misecs;
         }
         }
-       </script>
-      @endpush
-@endsection
+        </script>
+     @endpush
