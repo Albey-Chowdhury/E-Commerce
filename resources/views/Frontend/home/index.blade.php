@@ -7,25 +7,21 @@
             <!-- row -->
             <div class="row">
                 {{--Catagory --}}
-                <div class="top-catagory">
-                    <div class="container">
+                <div class="container top-catagory">
+
                         <div class="row">
                             <div class="top-all-catagory">
                                 <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/smart-tv.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/gpu.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/cctv-camera.png"></a></ul>
                                 <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/smart-refrigerator.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/washing-machine.png"></a></ul>
                                 <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/laptop.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/gpu.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/gpu.png"></a></ul>
+                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/smartphone.png"></a></ul>
                                 <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/desktop.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
-                                <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
                                 <ul><a class="col-md-1 singl-category"><img class="category-img" src="Frontend/img/camera.png"></a></ul>
                             </div>
                         </div>
-                    </div>
+
                 </div>
                 {{--/ Catagory --}}
                <!-- shop -->

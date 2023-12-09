@@ -21,6 +21,7 @@ use App\Http\Controllers\Backend\BrandController;
 Route::get('/',[FrontendController::class, 'index']);
 Route::get('/Store',[FrontendController::class, 'Store']);
 Route::get('/Checkout',[FrontendController::class,'Checkout']);
+Route::get('/view/cart',[FrontendController::class,'viewCart']);
 Route::get('/Category',[FrontendController::class,'Category']);
 Route::get('/Store/Laptops/{id}',[FrontendController::class,'StoreLaptops']);
 Route::post('/product/add/to/cart',[FrontendController::class,'productAddToCart']);

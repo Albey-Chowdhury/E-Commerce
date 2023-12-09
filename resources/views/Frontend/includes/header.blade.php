@@ -33,7 +33,7 @@
                   <div class="col-md-6">
                      <div class="header-search">
                         <form>
-                           <select class="input-select">
+                           <select class="input-select" style="color: #ff0052">
                               <option value="0">All Categories</option>
                             @foreach ($categories as $category )
                                 <option>{{$category->name}}</option>
@@ -84,13 +84,13 @@
                               @php
                                  $sum += $totalPrice
                               @endphp
+                            @endforeach
                               <div class="cart-summary">
                                   <small>{{$product->qty}} Item(s) Selected</small>
                                   <h5>SUBTOTAL: ${{$sum}}</h5>
                                 </div>
-                            @endforeach
                               <div class="cart-btns">
-                                 <a href="#">View Cart</a>
+                                 <a href="{{('/view/cart')}}">View Cart</a>
                                  <a href="{{url('/cart/checkout')}}">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
                               </div>
                            </div>
